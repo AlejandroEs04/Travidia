@@ -2,19 +2,24 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Link } from 'expo-router'
 import React from 'react'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useThemeColor } from '@/hooks/useThemeColor';
+import { Colors } from '@/constants/Colors';
 
 export default function Navbar() {
+    const backgroundColor = useThemeColor({ light: Colors.light.container, dark: Colors.dark.container }, 'background');
+    const color = useThemeColor({ light: Colors.light.text, dark: Colors.dark.text }, 'background');
+    
     return (
         <View style={styles.container}>
-            <View style={styles.navbarContainer}>
+            <View style={[styles.navbarContainer, { backgroundColor }]}>
                 <Link href={'/trip/trips'}>
-                    <MaterialIcons name="airplane-ticket" size={30} color="black" />
+                    <MaterialIcons name="airplane-ticket" size={38} color={color} />
                 </Link>
                 <Link href={'/'}>
-                    <MaterialIcons name="home" size={32} color="black" />
+                    <MaterialIcons name="home" size={38} color={color} />
                 </Link>
                 <Link href={'/trip/request'}>
-                    <MaterialIcons name="add" size={32} color="black" />
+                    <MaterialIcons name="add" size={38} color={color} />
                 </Link>
             </View>
         </View>

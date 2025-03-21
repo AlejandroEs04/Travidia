@@ -135,13 +135,13 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.Palette.primary, 
     },
     banner: {
-        padding: 26,
+        padding: 15,
         paddingTop: 65
     },
     container: {
         backgroundColor: Colors.Palette.white,
         height: '100%',
-        padding: 26
+        padding: 15
     },
     label: {
         fontWeight: '600',

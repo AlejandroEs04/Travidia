@@ -50,12 +50,12 @@ const styles = StyleSheet.create({
         color: Colors.Palette.white
     },
     bannerContainer: {
-        padding: 26,
+        padding: 15,
         paddingTop: 65
     }, 
     mainContainer: {
-        paddingHorizontal: 26,
-        paddingTop: 26,
+        paddingHorizontal: 15,
+        paddingTop: 20,
         backgroundColor: Colors.light.background,
         height: '100%'
     },
